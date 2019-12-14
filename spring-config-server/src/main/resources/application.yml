@@ -7,10 +7,12 @@ spring:
         git:
           uri: https://github.com/XuMinCha/myProject.git
           search-paths: config-files
+          basedir: C:\config\tmp            
     stream:
       bindings:
-         springCloudBusInput: 
+        springCloudBusInput: 
           group: Server-Consumer
+            
   rabbitmq:
     host: 192.168.1.9
     port: 5672

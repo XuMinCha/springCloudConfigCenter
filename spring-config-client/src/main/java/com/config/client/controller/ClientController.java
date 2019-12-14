@@ -1,11 +1,12 @@
 package com.config.client.controller;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RefreshScope
+@Scope(value="refresh", proxyMode=ScopedProxyMode.TARGET_CLASS)
 @RestController
 @RequestMapping("/test")
 public class ClientController {
